@@ -211,6 +211,7 @@ body {
     position: relative;
     left: 40%;
     transform: translateX(-40%);
+    z-index: 2;
 }
 .presale-title {
     margin-bottom: 10px; /* Decrease this value to reduce the gap */
@@ -276,13 +277,18 @@ button {
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .presale-container {
-        width: 70%; /* Make it 90% of the viewport width */
+        width: 90%; /* Responsive width */
+        max-width: none; /* Remove max-width to let it use full width on mobile */
         left: auto; /* Reset left positioning */
-        transform: none; /* Remove translate adjustment */
-        margin: 20px auto; /* Center with auto margins */
-        padding: 20px; /* Adjust padding for smaller screens */
-        order: 2;
+        transform: none; /* Remove translation */
+        margin: 20px auto; /* Center it with margin adjustments */
+        padding: 15px; /* Adjust padding for mobile */
     }
+    .mobile-layout {
+        display: flex;
+        flex-direction: column;
+    }
+}
     
     .nav-links {
         display: none;
@@ -347,10 +353,11 @@ button {
         flex-direction: column; /* Ensure vertical stacking */
     }
 
-    .Gif1 {
-        order: 1;
-        max-width: 100px;
-        height: auto;
+    .Gif1 img {
+        position: static; /* Reset positioning */
+        max-width: 100%; /* Ensure image scales down */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
     }
 
     .Available img {
