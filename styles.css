@@ -288,7 +288,6 @@ button {
         display: flex;
         flex-direction: column;
     }
-}
     
     .nav-links {
         display: none;
