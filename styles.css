@@ -213,6 +213,7 @@ body {
     transform: translateX(-40%);
     z-index: 2;
 }
+
 .presale-title {
     margin-bottom: 10px; /* Decrease this value to reduce the gap */
     font-size: 24px; /* Adjust size as needed */
