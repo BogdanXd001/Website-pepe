@@ -109,9 +109,11 @@ body {
 }
 .slider {
     position: relative;
-    width: 40%; /* Adjust as needed */
+    max-width: 50%;
+    flex: 1;
     overflow: hidden;
-    margin-left: 750px;
+    margin-left: 150px;
+    z-index: 3;
 }
 
 .slides {
@@ -126,6 +128,7 @@ body {
 
 .section4 {
     background-image: url(background4.png);
+    height: 100vh;
 }
 .navbar {
     background-color: #00a1e0;
@@ -275,6 +278,52 @@ button {
     margin-top: 5px; /* Adds space between the number and label */
 }
 
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.imgg1 {
+    flex: 1;
+    max-width: 50%; /* Half width for desktop */
+    z-index: 3;
+}
+.section5 {
+    background-image: url('background5.png');
+    z-index: -2;
+}
+
+/* Bridge images styling for row and stacking */
+.bridge-images {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.bridge-images img:nth-child(1) {
+    margin-top: -30px; /* Move the first image a bit higher */
+}
+
+.bridge-images img:nth-child(2) {
+    margin-top: 30px; /* Move the second image a bit lower */
+}
+
+.bridge-images img:nth-child(3) {
+    margin-top: -30px; /* Move the third image a bit higher */
+}
+
+.bridge-images img:nth-child(4) {
+    margin-top: 30px; /* Move the fourth image a bit lower */
+}
+.section4 .Bridge h1{
+    text-align: center;
+    padding-top: 630px;
+}
+
+.bridge-images img {
+    width: 300px;
+    max-width: 500px; /* Limit width of each image */
+}
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .presale-container {
@@ -365,14 +414,23 @@ button {
         height: auto;  /* Maintain aspect ratio */
         max-width: 100%;  /* Ensure it fits smaller screens */
         margin-top: 10px; /* Optional space between text and image */
-      }
+    }
       .slider {
         position: relative;
         width: 80%; /* Adjust as needed */
         overflow: hidden;
         margin-left: 50px;
-      }  
+    }  
       .flex-container {
         display: flex;
         flex-direction: column; /* Stack items vertically */  
+    }
+    .bridge-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bridge-images img {
+        max-width: 100%; /* Full width for mobile */
+    }
 }
